@@ -17,7 +17,9 @@ function addTask() {
     taskInput.value = "";
 
     listItem.querySelector(".delete").addEventListener("click", function () {
-        taskList.removeChild(listItem);
+        if (confirm("Apakah Anda yakin menghapus?")) {
+            taskList.removeChild(listItem);
+        }
     });
 }
 
